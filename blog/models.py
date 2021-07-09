@@ -28,7 +28,7 @@ class Post(models.Model):
 
     class Meta:
         verbose_name="entrada"
-        verbose_name="entradas"
+        verbose_name_plural="entradas"
         ordering = ['-created']
 
 def __str__(self):
