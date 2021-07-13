@@ -32,8 +32,12 @@ urlpatterns = [
     #path de pages
     path('page/', include('pages.urls')),
 
+    #path de contact
+    path('contact/', include('contact.urls')),   
+
     #path del admin
     path('admin/', admin.site.urls),
+    
 ]
 
 if settings.DEBUG:

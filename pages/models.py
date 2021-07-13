@@ -1,11 +1,12 @@
 from django.db import models
-#from ckeditor.fields import RickTextField
+from ckeditor.fields import RichTextField
 
 
 # Create your models here.
 class Page(models.Model):
     title = models.CharField(verbose_name="Titulo",max_length=200)
-    content = models.TextField(verbose_name="Contenido")
+    #content = models.TextField(verbose_name="Contenido")
+    content = RichTextField(verbose_name="Contenido")
     order = models.SmallIntegerField(verbose_name="orden",default=0)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
